@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Time2SpeakMedico</string>
+    <string name="sesion">Iniciar Sesión</string>
+    <string name="correo_electronico">Correo electronico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="feedback">Escriba el feedback respectivo a la terapia</string>
 </resources>
