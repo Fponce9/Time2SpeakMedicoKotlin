@@ -8,11 +8,14 @@ import android.widget.Toast
 import com.example.time2speakmedico.Network.Doctor
 import com.example.time2speakmedico.Network.KututisApi
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_perfil.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
+var doctor: Doctor = Doctor(0,"","","",0,"",false)
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,14 +44,30 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call<Doctor>, response: Response<Doctor>) {
-                Toast.makeText(applicationContext,"Bienvenido Doctor", Toast.LENGTH_LONG).show()
-                StartIntent()
+
+                doctor.nombre = response.body()!!.nombre
+                doctor.apellido = response.body()!!.apellido
+                doctor.idDoctor = response.body()!!.idDoctor
+                doctor.deshabilitar = response.body()!!.deshabilitar
+                doctor.correo = response.body()!!.correo
+                doctor.contrasena = response.body()!!.contrasena
+
+
+                if(doctor.deshabilitar){
+                    Toast.makeText(applicationContext,"Su cuenta ha sido deshabilitada",Toast.LENGTH_LONG).show()
+                }
+                else{
+                    Toast.makeText(applicationContext,"Bienvenido Doctor: " + doctor.nombre, Toast.LENGTH_LONG).show()
+
+                    StartIntent()
+                }
             }
         })
     }
 
+
     private fun StartIntent() {
-        val feedback = Intent(this, Feedback::class.java)
+        val feedback = Intent(this, Letras::class.java)
         //intent.putExtra("idPacienteinit", "${usuario.idPaciente}")
         startActivity(feedback)
     }

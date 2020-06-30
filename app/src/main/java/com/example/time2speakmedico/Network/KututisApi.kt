@@ -1,10 +1,7 @@
 package com.example.time2speakmedico.Network
 
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface KututisApi {
     @GET("inciarsesionDoctor/{correo}/{contrasena}")
@@ -12,4 +9,10 @@ interface KututisApi {
 
     @POST("Feedback")
     fun postFeedback(@Body terapia:TerapiaPost):Call<TerapiaPost>
+
+    @PUT("actualizarDoctor")
+    fun editDoctor(@Body doctor:Doctor):Call<Doctor>
+
+    @POST("deshabilitarDoc/{id}")
+    fun deshabilitar(@Path("id") id:Int):Call<Doctor>
 }

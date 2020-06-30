@@ -4,9 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 class Doctor (
     @SerializedName("id_doctor")
-    val idDoctor : Int,
-    val apellido: String,
+    var idDoctor : Int,
+    var apellido: String,
     var nombre: String,
     var correo: String,
-    var telefono: Int
+    var telefono: Int,
+    var contrasena: String,
+    var deshabilitar: Boolean
 )

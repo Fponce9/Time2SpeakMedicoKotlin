@@ -7,7 +7,7 @@
     tools:context=".Letras">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivEditar"
         android:layout_width="77dp"
         android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"

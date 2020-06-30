@@ -9,4 +9,5 @@
     <string name="correo">Correo</string>
     <string name="nombre">Nombre</string>
     <string name="repetirContra">Repetir contraseña</string>
+    <string name="deshabilitado">Deshabilitado</string>
 </resources>
