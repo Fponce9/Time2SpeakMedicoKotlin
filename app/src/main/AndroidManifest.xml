@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.time2speakmedico">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Letras"></activity>
+        <activity android:name=".Perfil"></activity>
+        <activity android:name=".Letras" />
         <activity android:name=".Palabras" />
         <activity android:name=".Feedback" />
         <activity android:name=".MainActivity">

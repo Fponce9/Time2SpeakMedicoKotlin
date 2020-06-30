@@ -4,4 +4,9 @@
     <string name="correo_electronico">Correo electronico</string>
     <string name="contrasena">Contraseña</string>
     <string name="feedback">Escriba el feedback respectivo a la terapia</string>
+    <string name="mi_perfil">Mi Perfil</string>
+    <string name="apellido">Apellido</string>
+    <string name="correo">Correo</string>
+    <string name="nombre">Nombre</string>
+    <string name="repetirContra">Repetir contraseña</string>
 </resources>

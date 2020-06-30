@@ -7,8 +7,8 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface KututisApi {
-    @GET("getDoctor/{id}")
-    fun getDoctorData(@Path("id") id: String): Call<Doctor>
+    @GET("inciarsesionDoctor/{correo}/{contrasena}")
+    fun getDoctorData(@Path("correo") correo: String,@Path("contrasena") contrasena:String): Call<Doctor>
 
     @POST("Feedback")
     fun postFeedback(@Body terapia:TerapiaPost):Call<TerapiaPost>

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val KututisApi = retrofitBuilder.create(KututisApi::class.java)
-        val request = KututisApi.getDoctorData("1")
+        val request = KututisApi.getDoctorData(correo,contrasena)
 
         request.enqueue(object : Callback<Doctor> {
             override fun onFailure(call: Call<Doctor>, t: Throwable) {
