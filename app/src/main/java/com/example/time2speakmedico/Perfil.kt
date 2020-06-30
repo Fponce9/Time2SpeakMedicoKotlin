@@ -1,5 +1,6 @@
 package com.example.time2speakmedico
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -45,8 +46,8 @@ class Perfil : AppCompatActivity() {
                 }
 
                 override fun onResponse(call: Call<Doctor>, response: Response<Doctor>) {
-
-                    //Toast.makeText(applicationContext,"Cuenta actualizada", Toast.LENGTH_SHORT).show()
+                    finish()
+                    Toast.makeText(applicationContext,"Cuenta actualizada", Toast.LENGTH_SHORT).show()
                 }
             })
             }

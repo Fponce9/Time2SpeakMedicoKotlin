@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun StartIntent() {
-        val feedback = Intent(this, Letras::class.java)
+        val feedback = Intent(this, Feedback::class.java)
         //intent.putExtra("idPacienteinit", "${usuario.idPaciente}")
         startActivity(feedback)
     }

@@ -1,5 +1,6 @@
 package com.example.time2speakmedico
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,9 @@ class Feedback : AppCompatActivity() {
 
         btnFeedback.setOnClickListener {
             enviarFeedback()
+        }
+        ivEditar2.setOnClickListener {
+            startIntent()
         }
     }
 
@@ -48,5 +52,10 @@ class Feedback : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun startIntent() {
+        val feedback = Intent(this, Perfil::class.java)
+        startActivity(feedback)
     }
 }
